@@ -50,7 +50,7 @@ gen_bin_ver()
     echo "$__bin_ver_str"
 }
 
-gcc main.c -DBIN_VER=\"`gen_bin_ver`\"
+gcc main.c "-DBIN_VER=\"`gen_bin_ver`\""
 
 # test
 BIN_VER_TYPE() {
