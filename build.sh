@@ -46,7 +46,7 @@ gen_bin_ver()
         __commit="nil"
     fi
 
-    __bin_ver_str="commit=$__commit;buildpath=`pwd`;buildhost=`hostname`;buildtime=`date +%F_%T`"
+    __bin_ver_str="commit=$__commit;buildpath=`pwd`;buildhost=`hostname`;buildtime=`TZ=Asia/Shanghai date --iso-8601=seconds`"
     echo "$__bin_ver_str"
 }
 
